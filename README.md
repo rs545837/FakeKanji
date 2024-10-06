@@ -7,16 +7,16 @@ pip install -r requirements.txt
 ```
 
 ```bash
-python kanjivg2png.py
-```
-
-```bash
 apt-get update
 apt-get install -y libcairo2-dev
 apt-get install -y libffi-dev
 pip uninstall cairosvg
 pip install cairosvg
 apt-get install -y libpango1.0-dev
+```
+
+```bash
+python kanjivg2png.py
 ```
 
 ```bash
