@@ -66,3 +66,12 @@ accelerate launch \
   --from_scratch \
   --resume_from_checkpoint=latest
 ```
+
+```bash
+python test_kanji.py \
+  --model_path="/root/fake-kanji/output/checkpoint-20000" \
+  --output_dir="/root/fake-kanji/test_results" \
+  --prompt="A beautiful kanji character meaning love" \
+  --num_images=10 \
+  --checkpoint="latest"
+```
