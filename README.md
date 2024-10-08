@@ -75,3 +75,9 @@ python test_kanji.py \
   --num_images=10 \
   --checkpoint="latest"
 ```
+
+
+
+```
+poetry run python -m scripts.preprocess_data
+```
