@@ -86,20 +86,20 @@ poetry run python -m scripts.preprocess_data
 
 ```
 accelerate launch train_kanji.py \
-    --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
+    --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-4" \
     --train_data_dir="./data" \
     --resolution=256 \
     --center_crop \
     --train_batch_size=4 \
     --gradient_accumulation_steps=1 \
     --gradient_checkpointing \
-    --max_train_steps=5000 \
+    --max_train_steps=30000 \
     --snr_gamma=5.0 \
     --learning_rate=1e-05 \
     --max_grad_norm=1 \
     --lr_scheduler=constant \
     --output_dir="./output" \
-    --validation_prompt="A beautiful kanji character" \
+    --validation_prompt="beautiful sky" \
     --report_to=wandb \
     --tracker_project_name=sd_kanji \
     --checkpointing_steps=2500 \
