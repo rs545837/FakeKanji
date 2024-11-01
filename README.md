@@ -81,3 +81,33 @@ python test_kanji.py \
 ```
 poetry run python -m scripts.preprocess_data
 ```
+
+
+
+```
+accelerate launch train_kanji.py \
+    --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
+    --train_data_dir="/data" \
+    --resolution=256 \
+    --center_crop \
+    --train_batch_size=4 \
+    --gradient_accumulation_steps=1 \
+    --gradient_checkpointing \
+    --max_train_steps=5000 \
+    --snr_gamma=5.0 \
+    --learning_rate=1e-05 \
+    --max_grad_norm=1 \
+    --lr_scheduler=constant \
+    --output_dir="/output" \
+    --validation_prompt="A beautiful kanji character" \
+    --report_to=wandb \
+    --tracker_project_name=sd_kanji \
+    --checkpointing_steps=2500 \
+    --validation_epochs=20 \
+    --use_8bit_adam \
+    --from_scratch \
+    --mixed_precision="fp16" \
+    --enable_xformers_memory_efficient_attention \
+    --allow_tf32 \
+    --dataloader_num_workers=4
+```
