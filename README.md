@@ -102,7 +102,7 @@ accelerate launch train_kanji.py \
     --validation_prompt="beautiful sky" \
     --report_to=wandb \
     --tracker_project_name=sd_kanji \
-    --checkpointing_steps=2500 \
+    --checkpointing_steps=5000 \
     --validation_epochs=20 \
     --use_8bit_adam \
     --from_scratch \
