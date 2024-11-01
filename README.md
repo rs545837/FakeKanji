@@ -87,7 +87,7 @@ poetry run python -m scripts.preprocess_data
 ```
 accelerate launch train_kanji.py \
     --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
-    --train_data_dir="/data" \
+    --train_data_dir="./data" \
     --resolution=256 \
     --center_crop \
     --train_batch_size=4 \
@@ -98,7 +98,7 @@ accelerate launch train_kanji.py \
     --learning_rate=1e-05 \
     --max_grad_norm=1 \
     --lr_scheduler=constant \
-    --output_dir="/output" \
+    --output_dir="./output" \
     --validation_prompt="A beautiful kanji character" \
     --report_to=wandb \
     --tracker_project_name=sd_kanji \
