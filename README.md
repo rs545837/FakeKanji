@@ -86,7 +86,7 @@ poetry run python -m scripts.preprocess_data
 
 ```
 accelerate launch train_kanji.py \
-    --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-4" \
+    --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
     --train_data_dir="./data" \
     --resolution=256 \
     --center_crop \
