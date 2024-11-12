@@ -1,5 +1,11 @@
 # Quick Start
 
+## Clone the Reposiotry:
+```bash 
+git clone https://github.com/rs545837/FakeKanji
+```
+
+## Make Virtual Env and install dependencies
 ```bash
 python -m venv venv
 source venv/bin/activate
@@ -15,6 +21,9 @@ pip uninstall cairosvg
 pip install cairosvg
 apt-get install -y libpango1.0-dev
 ```
+
+Create a data directory inside of the FakeKanji Folder:
+Download the two Kanji XML files and store them into the data directory.
 
 ```bash
 python kanjivg2png.py
