@@ -34,7 +34,7 @@ accelerate launch train_kanji.py \
     --train_batch_size=4 \
     --gradient_accumulation_steps=1 \
     --gradient_checkpointing \
-    --max_train_steps=30000 \
+    --max_train_steps=300000 \
     --snr_gamma=5.0 \
     --learning_rate=1e-05 \
     --max_grad_norm=1 \
@@ -43,7 +43,7 @@ accelerate launch train_kanji.py \
     --validation_prompt="beautiful sky" \
     --report_to=wandb \
     --tracker_project_name=sd_kanji \
-    --checkpointing_steps=5000 \
+    --checkpointing_steps=1000 \
     --validation_epochs=20 \
     --use_8bit_adam \
     --from_scratch \
