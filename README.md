@@ -61,3 +61,27 @@ accelerate launch train_kanji.py \
     --allow_tf32 \
     --dataloader_num_workers=4
 ```
+
+
+```
+!accelerate launch --mixed_precision="no" --num_processes=1 --num_machines=1 --dynamo_backend="no" train_text_to_image_lora.py \
+  --pretrained_model_name_or_path="CompVis/stable-diffusion-v1-4" \
+  --dataset_name="yashvoladoddi37/kanjienglish" \
+  --image_column="image" \
+  --caption_column="text" \
+  --resolution=512 \
+  --random_flip \
+  --train_batch_size=2 \
+  --num_train_epochs=1 \
+  --checkpointing_steps=500 \
+  --learning_rate=1e-04 \
+  --lr_scheduler="constant" \
+  --lr_warmup_steps=0 \
+  --seed=42 \
+  --output_dir="kanji-diffusion-v1-4" \
+  --validation_prompt="A kanji meaning Elon Musk" \
+  --report_to="tensorboard" \
+  --logging_dir="logs"
+```
+> [!NOTE]
+> If you want to increase the number of GPUs, just increase the num_processes arguments
