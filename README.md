@@ -64,7 +64,7 @@ accelerate launch train_kanji.py \
     --dataloader_num_workers=4
 ```
 
-
+## For LORA Finetuning of the Stable Diffusion Model:
 ```
 !accelerate launch --mixed_precision="no" --num_processes=1 --num_machines=1 --dynamo_backend="no" train_text_to_image_lora.py \
   --pretrained_model_name_or_path="CompVis/stable-diffusion-v1-4" \
