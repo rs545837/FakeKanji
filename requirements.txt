@@ -84,5 +84,3 @@ xformers==0.0.24
 xxhash==3.4.1
 yarl==1.9.4
 zipp==3.17.0
-pip uninstall -y diffusers
-pip install git+https://github.com/huggingface/diffusers.git
